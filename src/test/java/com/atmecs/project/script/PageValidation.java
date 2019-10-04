@@ -56,10 +56,12 @@ public class PageValidation extends Browsers {
 		Helper.click(driver, moreInfo);
 	    String actualBreadCrumb = Helper.getText(driver,Utility.propertyRead(Constants.homePage_loc,"loc_breadcrumb_xpath_txt"));
 		Helper.navigate(driver);
+		
 		if(!homePageHeader.equals(actualBreadCrumb))
 		{
 			LogReport.info("user landed successfully before after clicking more info");
 		}
+		
 		Validation.pageValidation(actualBreadCrumb , breadCrumb);
 		
 
