@@ -10,7 +10,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import com.atmecs.project.constants.Constants;
-import com.atmecs.project.utils.PropertyReader;
+import com.atmecs.project.utils.Utility;
 
 /**
 	 * Different browser setup to run the script in different different browser.
@@ -26,9 +26,9 @@ import com.atmecs.project.utils.PropertyReader;
 		@BeforeTest
 		public void browserSetup() throws IOException {
 
-			String url = PropertyReader.read(Constants.config_file,"url");
+			String url = Utility.propertyRead(Constants.config_file,"url");
 
-			String browserName = PropertyReader.read(Constants.config_file, "browserName");
+			String browserName =Utility.propertyRead(Constants.config_file, "browserName");
 
 			
 

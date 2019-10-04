@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.atmecs.project.script.ValidateHomePage">
+      <class name="com.atmecs.project.script.PageValidation">
         <methods>
-          <include name="clickOptionsExplore"/>
+          <include name="clickOptionMoreInfo" invocation-numbers="1 2 3 4"/>
           <include name="browserClose"/>
           <include name="browserSetup"/>
-          <include name="clickOptionMoreInfo" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.atmecs.project.script.ValidateHomePage -->
+      </class> <!-- com.atmecs.project.script.PageValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
